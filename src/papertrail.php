@@ -113,7 +113,7 @@
 		private static function sendSocket() {
 			$octets = socket_sendto(self::$socket, self::$syslog, strlen(self::$syslog), 0, self::$host, self::$port);
 
-			if( ! $octets ) {
+			if( $octets === false ) {
 				throw new RuntimeException('could not send socket to ' . self::$host . ' on port ' . self::$port);
 			}
 		}
