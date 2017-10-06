@@ -2,10 +2,11 @@
 Let you log in your papertrail log server
 
 ## Requirements
-You will need to activate the `php_sockets` extension by uncommenting the line in the `php.ini` file.
+- You will need to activate the `php_sockets` extension by uncommenting the line in the `php.ini` file.
+- You will need to use Composer for this package.
 
 ## Installation
-Download this file and require it in any script where you need to use it.
+Execute `composer require port-adhoc/papertrail` from the prompt command in your project folder.
 
 ## Examples
 - [Example of usage 1 : basic example](#example-of-usage-1--basic-example)
@@ -13,7 +14,7 @@ Download this file and require it in any script where you need to use it.
 
 ### Example of usage 1 : basic example
 ```php
-include(__DIR__ . '/papertrail.php');
+require( __DIR__ . '/vendor/autoload.php' );
 
 Papertrail::host('example.papertrailapp.com')
   ->port(123456)
@@ -31,7 +32,7 @@ Refer to the [Severity levels constants list](#severity-levels-constants-list) f
 
 ### Example of usage 2 : sending multiple message in one script
 ```php
-include(__DIR__ . '/papertrail.php');
+require( __DIR__ . '/vendor/autoload.php' );
 
 Papertrail::host('example.papertrailapp.com')
   ->port(123456)
