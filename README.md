@@ -1,6 +1,8 @@
 # papertrail-php
 Let you log in your papertrail log server
 
+[![Packagist](https://img.shields.io/packagist/v/port-adhoc/papertrail.svg)]()
+
 ## Requirements
 - You will need to activate the `php_sockets` extension by uncommenting the line in the `php.ini` file.
 - You will need to use Composer for this package.
