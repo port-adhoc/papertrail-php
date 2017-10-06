@@ -22,7 +22,7 @@ Papertrail::host('example.papertrailapp.com')
   ->program('cron')
   ->component('spam-cleaning')
   ->message('hello world')
-  ->severity( Papertrail::SEVERITY_ERROR )
+  ->severity( Papertrail::SEVERITY_DEBUG )
   ->send();
 ```
 
@@ -43,13 +43,13 @@ Papertrail::host('example.papertrailapp.com')
 // a few moments later
 
 Papertrail::message('fetching table done')
-  ->severity( Papertrail::SEVERITY_ERROR )
+  ->severity( Papertrail::SEVERITY_DEBUG )
   ->send();
 
 // an eternity later
 
 Papertrail::message('cleaning table done')
-  ->severity( Papertrail::SEVERITY_ERROR )
+  ->severity( Papertrail::SEVERITY_DEBUG )
   ->send();
 ```
 
