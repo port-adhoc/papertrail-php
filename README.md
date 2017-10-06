@@ -1,0 +1,67 @@
+# papertrail-php
+Let you log in your papertrail log server
+
+## Requirements
+You will need to activate the `php_sockets` extension by uncommenting the line in the `php.ini` file.
+
+## Installation
+Download this file and require it in any script where you need to use it.
+
+## Examples
+- [Example of usage 1 : basic example](#example-of-usage-1--basic-example)
+- [Example of usage 2 : sending multiple message in one script](#example-of-usage-2--sending-multiple-message-in-one-script)
+
+### Example of usage 1 : basic example
+```php
+include(__DIR__ . '/papertrail.php');
+
+Papertrail::host('example.papertrailapp.com')
+  ->port(123456)
+  ->facility(99)
+  ->program('cron')
+  ->component('spam-cleaning')
+  ->message('hello world')
+  ->severity( Papertrail::SEVERITY_ERROR )
+  ->send();
+```
+
+Refer to the [Severity levels constants list](#severity-levels-constants-list) for more severity levels.
+
+[back to the example list](#examples)
+
+### Example of usage 2 : sending multiple message in one script
+```php
+include(__DIR__ . '/papertrail.php');
+
+Papertrail::host('example.papertrailapp.com')
+  ->port(123456)
+  ->facility(99)
+  ->program('cron')
+  ->component('spam-cleaning');
+
+// a few moments later
+
+Papertrail::message('fetching table done')
+  ->severity( Papertrail::SEVERITY_ERROR )
+  ->send();
+
+// an eternity later
+
+Papertrail::message('cleaning table done')
+  ->severity( Papertrail::SEVERITY_ERROR )
+  ->send();
+```
+
+Refer to the [Severity levels constants list](#severity-levels-constants-list) for more severity levels.
+
+[back to the example list](#examples)
+
+## Severity levels constants list
+- `Papertrail::SEVERITY_EMERGENCY`
+- `Papertrail::SEVERITY_ALERT`
+- `Papertrail::SEVERITY_CRITICAL`
+- `Papertrail::SEVERITY_ERROR`
+- `Papertrail::SEVERITY_WARNING`
+- `Papertrail::SEVERITY_NOTICE`
+- `Papertrail::SEVERITY_INFORMATIONNAL`
+- `Papertrail::SEVERITY_DEBUG`
