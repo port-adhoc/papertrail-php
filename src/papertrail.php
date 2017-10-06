@@ -92,7 +92,7 @@
 			if( ! self::$socket ) {
 	  			$message = socket_strerror( socket_last_error() );
 	  			
-	  			throw new Exception( $message );
+	  			throw new RuntimeException( $message );
 	  		}
 		}
 
