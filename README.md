@@ -64,5 +64,5 @@ Refer to the [Severity levels constants list](#severity-levels-constants-list) f
 - `Papertrail::SEVERITY_ERROR`
 - `Papertrail::SEVERITY_WARNING`
 - `Papertrail::SEVERITY_NOTICE`
-- `Papertrail::SEVERITY_INFORMATIONNAL`
+- `Papertrail::SEVERITY_INFORMATIONAL`
 - `Papertrail::SEVERITY_DEBUG`

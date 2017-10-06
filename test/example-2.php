@@ -10,12 +10,12 @@
 	// a few moments later
 
 	Papertrail::message('fetching table done')
-		->severity( Papertrail::SEVERITY_ERROR )
+		->severity( Papertrail::SEVERITY_DEBUG )
 		->send();
 
 	// an eternity later
 
 	Papertrail::message('cleaning table done')
-		->severity( Papertrail::SEVERITY_ERROR )
+		->severity( Papertrail::SEVERITY_DEBUG )
 		->send();
 ?>

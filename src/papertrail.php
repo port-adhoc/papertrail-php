@@ -8,7 +8,7 @@
 		const SEVERITY_ERROR = 3;
 		const SEVERITY_WARNING = 4;
 		const SEVERITY_NOTICE = 5;
-		const SEVERITY_INFORMATIONNAL = 6;
+		const SEVERITY_INFORMATIONAL = 6;
 		const SEVERITY_DEBUG = 7;
 
 		public static $program = null;

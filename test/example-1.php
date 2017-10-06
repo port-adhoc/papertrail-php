@@ -9,6 +9,6 @@
 		->program('cron')
 		->component('spam-cleaning')
 		->message('hello world')
-		->severity( Papertrail::SEVERITY_ERROR )
+		->severity( Papertrail::SEVERITY_DEBUG )
 		->send();
 ?>
