@@ -1,0 +1,21 @@
+{
+    "name": "port-adhoc/papertrail",
+    "description": "Let you log in your papertrai log server",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Port Adhoc",
+            "email": "an@port-adhoc.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "PortAdhoc\\": "src/"
+        }
+    }
+}

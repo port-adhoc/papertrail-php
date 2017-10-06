@@ -1,7 +1,6 @@
 <?php
-	/**
-	 * Send log to a papertrail group
-	 */	
+	namespace PortAdhoc;
+
 	class Papertrail {
 		const SEVERITY_EMERGENCY = 0;
 		const SEVERITY_ALERT = 1;
