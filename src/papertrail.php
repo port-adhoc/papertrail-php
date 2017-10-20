@@ -109,7 +109,7 @@
 		}
 
 		private static function setSyslog() {
-			return "<" . ((self::$facility * 8) + self::$severity) . ">" . (new DateTime())->format('M d H:i:s:') . self::$program . ' ' . self::$component . ': ' . self::$line;
+			return "<" . ((self::$facility * 8) + self::$severity) . ">" . (new DateTime())->format('M d H:i:s') . self::$program . ' ' . self::$component . ': ' . self::$line;
 		}
 
 		private static function sendSocket() {
