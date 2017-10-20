@@ -1,6 +1,8 @@
 <?php
 	namespace PortAdhoc;
 
+	use \DateTime;
+
 	class Papertrail {
 		const SEVERITY_EMERGENCY = 0;
 		const SEVERITY_ALERT = 1;
@@ -107,7 +109,7 @@
 		}
 
 		private static function setSyslog() {
-			return "<" . ((self::$facility * 8) + self::$severity) . ">" . date('M d H:i:s ') . self::$program . ' ' . self::$component . ': ' . self::$line;
+			return "<" . ((self::$facility * 8) + self::$severity) . ">" . (new DateTime())->format('M d H:i:s:') . self::$program . ' ' . self::$component . ': ' . self::$line;
 		}
 
 		private static function sendSocket() {
