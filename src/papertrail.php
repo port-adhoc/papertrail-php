@@ -2,6 +2,8 @@
 	namespace PortAdhoc;
 
 	use \DateTime;
+	use InvalidArgumentException;
+	use RuntimeException;
 
 	class Papertrail {
 		const SEVERITY_EMERGENCY = 0;
