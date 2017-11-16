@@ -63,6 +63,18 @@ Refer to the [Severity levels constants list](#severity-levels-constants-list) f
 
 [back to the example list](#examples)
 
+## Known issues
+- [Timezone error](#timezone-error)
+
+### Timezone error
+If you ran into a similar error :
+
+```
+It is not safe to rely on the system's timezone settings. You are required to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone.
+```
+
+Please use [`date_default_timezone_set()`](http://php.net/manual/en/function.date-default-timezone-set.php) to globally set your timezone. 
+
 ## Severity levels constants list
 - `Papertrail::SEVERITY_EMERGENCY`
 - `Papertrail::SEVERITY_ALERT`
