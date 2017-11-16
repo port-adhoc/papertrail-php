@@ -18,6 +18,8 @@ Execute `composer require port-adhoc/papertrail` from the prompt command in your
 ```php
 require( __DIR__ . '/vendor/autoload.php' );
 
+use PortAdhoc\Papertrail;
+
 Papertrail::host('example.papertrailapp.com')
   ->port(123456)
   ->facility(99)
@@ -35,6 +37,8 @@ Refer to the [Severity levels constants list](#severity-levels-constants-list) f
 ### Example of usage 2 : sending multiple message in one script
 ```php
 require( __DIR__ . '/vendor/autoload.php' );
+
+use PortAdhoc\Papertrail;
 
 Papertrail::host('example.papertrailapp.com')
   ->port(123456)
