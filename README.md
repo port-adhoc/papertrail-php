@@ -1,3 +1,7 @@
+# Warning
+
+This package is abandoned for a more reliable, standardized and tested package. Please refer to [khalyomede/syslog](https://github.com/khalyomede/syslog) as an alternative as this package will now loose its support.
+
 # papertrail-php
 Let you log in your papertrail log server
 
